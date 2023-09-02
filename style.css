@@ -1,0 +1,133 @@
+
+
+html {
+  block-size: 100%;
+  color-scheme: dark light;
+}
+
+body {
+/*   color: #222; */
+  font-family: sans-serif;
+  user-select: none;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+  min-block-size: 100%;
+	background-color:#333;
+}
+
+#codeForm {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    font-size: 20px;
+		border: 1px solid #ddd;
+		border-radius: 10px
+}
+
+#codeForm h2 {
+    font-weight: 300;
+ 
+}
+
+.shrinkable {
+  transition: transform 100ms linear;
+  border:1px solid grey;
+  border-radius: 10px;
+  padding: .5rem;
+  margin:0 1rem;
+}
+
+.shrinkable.shrink {
+    transform: scale(0.9);
+}
+
+#code {
+    transition: transform 100ms linear;
+}
+
+#code input {
+    font-size: 50px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+#code input:active,
+#code input:focus {
+    outline: none;
+    border: 1px solid gray;
+}
+
+#code input.error {
+    border: 1px solid red;
+}
+
+#code input:disabled {
+    color: #222;
+    background-color: #FFFFFF;
+}
+
+#feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+}
+
+#feedbackImage {
+    width: 60px;
+    padding: 30px;
+}
+
+.growable {
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 350ms, opacity 350ms;
+    transition-timing-function: cubic-bezier(0.46, 0.03, 0, 1.58);
+}
+
+.growable.grow {
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[type="button"] {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+  text-transform: uppercase;
+    color: inherit;
+    cursor: pointer;
+}
+
+#sendButton {
+    padding: 6px 9px;
+    border-radius: 3px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+}
+
+#sendButton:hover {
+    background-color: rgb(128,128,128, 0.5);
+}
+
+button {
+	background-color:rgb(128,128,128, 0.5);
+	color: #ddd;
+	border: 1px solid #ddd;
+	padding: 10px 30px;
+	margin: 30px;
+	border-radius: 100px;
+}
+button:hover {
+	transform: scale(1.04);
+}
+.hidden {
+	display: none;
+}
